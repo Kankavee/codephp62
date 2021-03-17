@@ -1,42 +1,27 @@
 <?php
-
-function calnumber($score = 56)
-{
-switch ($score) 
-{
-
-    case ($score < 50):
-        echo "F";
+$a = 60;
+//$a
+switch ($a) {
+    case 5: ($a >= 80) ;
+        echo "Grade A";
        break;
-    case ($score <55):
-        echo "D";
+    case ($a >= 75):
+        echo "Grade B+";
         break;
-    case ($score <60):
-        echo "D+";
+    case ($a >= 70) :
+        echo "Grade B";
         break;
-    case ($score <65):
-        echo "C";
+    case ($a >= 60):
+        echo "Grade C";
         break;
-    case ($score <70):
-        echo "C+";
-        break; 
-    case ($score <75):
-        echo "B";
-        break;   
-        
-    case ($score < 80):
-        echo "B+";
+    case ($a >= 55):
+        echo "Grade D+";
+        break;
+    case ($a >= 50) :
+        echo "Grade D";
         break;
     default:
-        echo "A";
+        echo "Grade F";
         break;
-    }
-    echo "<br>";
-    return $score;
-
 }
-echo "<br>";
-echo calnumber()
 
-
-?>
