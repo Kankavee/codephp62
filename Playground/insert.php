@@ -1,6 +1,5 @@
     <?php
      require_once 'connectdb.php';
-
         if($_SERVER["REQUEST_METHOD"] == "POST"){
         $frmUsername = $frmPassword = "";
        $frmUsername = $_POST["username"];

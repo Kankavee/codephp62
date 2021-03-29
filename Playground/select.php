@@ -26,6 +26,8 @@
               <td> ID User</td>
               <td> ชื่อผู้ใช้</td>
               <td> สถานะ</td>
+              <td> เเก้ไข</td>
+              <td> ลบ</td>
           </tr>
     <?php
      while ($row = $result->fetch_array()) {
@@ -36,7 +38,9 @@
              <td> <?php echo $row["id"]?></td>
              <td> <?php echo $row["username"] ?></td>
              <td> <?php echo $row["status"]?></td>
-         </tr>
+             <td>edit</td>
+              <td><a href="delete.php?id=<?php echo $row["id"]?>">delete</a></td>
+        </tr>
          <?php
     }
     ?>
