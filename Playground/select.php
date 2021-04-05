@@ -1,7 +1,8 @@
+
 <?php
  require_once 'connectdb.php';
     
-    $strSQL = "SELECT `id_user`, `username`, `status` FROM `user` WHERE 1";
+    $strSQL = "SELECT `id`, `username`, `status` FROM `user` WHERE 1";
     $result = $myconn->query($strSQL);
 
     
@@ -30,11 +31,11 @@
         // echo $row["username"] . "<br>";
     ?>
          <tr>
-            <td> <?php echo $row["id_user"]; ?></td>
+            <td> <?php echo $row["id"]; ?></td>
             <td> <?php echo $row["username"]; ?></td>
             <td> <?php echo $row["status"]; ?></td>
-            <td><a href="update.php?id=<?php echo $row["id_user"]; ?>&username=<?php echo $row["username"]; ?>&status=<?php echo $row["status"]; ?>"><i class="fas fa-pen"></i></a></td>
-            <td><a href="delete.php?id=<?php echo $row["id_user"]; ?>"><i class="fas fa-trash"></i></a></td>
+            <td><a href="update.php?id=<?php echo $row["id"]; ?>&username=<?php echo $row["username"]; ?>&status=<?php echo $row["status"]; ?>"><i class="fas fa-pen"></i></a></td>
+            <td><a href="delete.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></td>
          <tr>
      <?php
     }

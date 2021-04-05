@@ -1,12 +1,11 @@
 <?php
-    $dbhost = 'localhost';
-    $dbuser = 'root';
-    $dbpass = '';
+$dbhost = 'localhost';
+$dbuser = 'root';
+$dbpass = '';
+$dbname = 'codephp62';
 
-    $dbname = 'codephp62';
-
-    $myconn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+$myconn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
     if ($myconn->connect_errno) {
-        printf("Connect failed: %s\n", $myconn->connect_error);
+        printf("Connect failed: %s\n", $myconn->connect_error9);
         exit();
     }
