@@ -1,4 +1,5 @@
 <?php
+include 'template/header.html';
 require_once 'connectdb.php';
 $id = "";
 $username = "";
@@ -48,29 +49,23 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
     //    echo "2";
     //}
     ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=, initial-scale=1.0">
-        <title>Document</title>
-    </head>
+   
     <body>
-    <form action="update.php?id=<?=$id?>" method="POST">
-        <table border="2">
-            <tr>
-                <td>Username</td>
-                <td><input type="text" name="username" value="<?=$username?>"></td>
-            </tr>
-            <tr>
-                <td>Status</td>
-                <td><input type="text" name="status" value="<?=$status?>"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="submit" value="save"></td>
-            </tr>
-        </table>
-    </form>
+    <form action="update.php?id=<?=$id?>" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">username</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="username" value="<?=$username ?>">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">status</label>
+    <input type="text" class="form-control" id="exampleInputPassword1"  name="status" value="<?= $status?>">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">SAVEชาวโลก</button>
+</form>
+    <?php
+       include 'template/footer.html';
+       ?>
     </body>
     </html>
